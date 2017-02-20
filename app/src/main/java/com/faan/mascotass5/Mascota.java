@@ -1,4 +1,4 @@
-package com.faan.mascotass5.pojo;
+package com.faan.mascotass5;
 
 /**
  * Created by FAAN on 20/02/2017.
@@ -9,6 +9,9 @@ public class Mascota {
     private int  raitingMascota;
     private int  fotoMascota;
 
+    public Mascota (){
+
+    }
 
     public Mascota (String nombre, int raiting, int foto){
         this.nombreMascota= nombre;

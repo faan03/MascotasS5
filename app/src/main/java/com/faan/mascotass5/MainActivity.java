@@ -9,9 +9,6 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 //import com.faan.mascotass5.adaptador.MascotaAdaptador;
-import com.faan.mascotass5.R;
-import com.faan.mascotass5.pojo.Mascota;
-import com.faan.mascotass5.cincoMascotas;
 
 import java.util.ArrayList;
 

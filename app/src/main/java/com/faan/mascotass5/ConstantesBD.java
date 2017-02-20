@@ -1,4 +1,4 @@
-package com.faan.mascotass5.bd;
+package com.faan.mascotass5;
 
 /**
  * Created by FAAN on 20/02/2017.

@@ -7,10 +7,6 @@ import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 //import com.faan.mascotass5.MascotaAdaptador;
-import com.faan.mascotass5.R;
-import com.faan.mascotass5.pojo.Mascota;
-import com.faan.mascotass5.R;
-
 
 
 import java.util.ArrayList;

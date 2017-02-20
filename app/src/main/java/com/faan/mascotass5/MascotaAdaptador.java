@@ -10,8 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.faan.mascotass5.pojo.Mascota;
-
 import java.util.ArrayList;
 
 /**

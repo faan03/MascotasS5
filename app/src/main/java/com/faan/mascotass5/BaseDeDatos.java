@@ -1,4 +1,4 @@
-package com.faan.mascotass5.bd;
+package com.faan.mascotass5;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -8,15 +8,16 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import java.util.ArrayList;
 
+
 /**
  * Created by FAAN on 20/02/2017.
  */
 
-public class BaseDatos extends SQLiteOpenHelper {
+public class BaseDeDatos extends SQLiteOpenHelper {
 
     private Context context;
 
-    public BaseDatos(Context context) {
+    public BaseDeDatos(Context context) {
         super(context, ConstantesBD.DATABASE_NAME, null, ConstantesBD.DATABASE_VERSION);
         this.context = context;
     }
@@ -64,11 +65,11 @@ public class BaseDatos extends SQLiteOpenHelper {
             Cursor reguistrosMascota =  db.rawQuery(queryMascota, null);
 
             if (reguistrosMascota.moveToNext()) {
-                mascota.setId(reguistrosMascota.getInt(0));
-                mascota.setFoto(reguistrosMascota.getInt(1));
-                mascota.setNombre(reguistrosMascota.getString(2));
+                mascota.setIdMascota(reguistrosMascota.getInt(0));
+                mascota.setFotoMascota(reguistrosMascota.getInt(1));
+                mascota.setNombreMascota (reguistrosMascota.getString(2));
             }
-            mascota.setLikes(registros.getInt(2));
+            mascota.setRaitingMascota(registros.getInt(2));
             mascotas.add(mascota);
         }
 
@@ -84,17 +85,17 @@ public class BaseDatos extends SQLiteOpenHelper {
 
         while (registros.moveToNext()) {
             Mascota mascota = new Mascota();
-            mascota.setId(registros.getInt(0));
-            mascota.setFoto(registros.getInt(1));
-            mascota.setNombre(registros.getString(2));
+            mascota.setIdMascota(registros.getInt(0));
+            mascota.setFotoMascota(registros.getInt(1));
+            mascota.setNombreMascota(registros.getString(2));
             String queryLikes = "SELECT COUNT(" + ConstantesBD.TABLE_LIKES_MASCOTA_LIKES + ") as likes" +
                     " FROM " + ConstantesBD.TABLE_LIKES_MASCOTA +
-                    " WHERE " + ConstantesBD.TABLE_LIKES_MASCOTA_ID_MASCOTA + "=" + mascota.getId();
+                    " WHERE " + ConstantesBD.TABLE_LIKES_MASCOTA_ID_MASCOTA + "=" + mascota.getIdMascota();
             Cursor registrosLikes = db.rawQuery(queryLikes, null);
             if (registrosLikes.moveToNext()) {
-                mascota.setLikes(registrosLikes.getInt(0));
+                mascota.setRaitingMascota(registrosLikes.getInt(0));
             } else {
-                mascota.setLikes(0);
+                mascota.setRaitingMascota(0);
             }
             mascotas.add(mascota);
         }
@@ -119,7 +120,7 @@ public class BaseDatos extends SQLiteOpenHelper {
         int likes = 0;
         String query = "SELECT COUNT(" + ConstantesBD.TABLE_LIKES_MASCOTA_LIKES + ") " +
                 "FROM " + ConstantesBD.TABLE_LIKES_MASCOTA +
-                " WHERE " + ConstantesBD.TABLE_LIKES_MASCOTA_ID_MASCOTA + "=" + mascota.getId();
+                " WHERE " + ConstantesBD.TABLE_LIKES_MASCOTA_ID_MASCOTA + "=" + mascota.getIdMascota();
         SQLiteDatabase db = this.getWritableDatabase();
         Cursor registros = db.rawQuery(query, null);
 
