@@ -19,8 +19,6 @@ import java.util.ArrayList;
 
 public class MascotaAdaptador extends RecyclerView.Adapter<MascotaAdaptador.MascotaViewHolder> {
 
-
-
     public MascotaAdaptador (ArrayList <Mascota> mascotas, Activity activity, Context context){
         this.mascotas=mascotas;
         this.activity= activity;

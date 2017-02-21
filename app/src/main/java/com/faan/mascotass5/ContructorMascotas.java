@@ -14,6 +14,7 @@ public class ContructorMascotas {
         this.context = context;
     }
 
+
     public ArrayList<Mascota> obtenerCincoMascotas() {
         BaseDeDatos db = new BaseDeDatos(context);
         return db.obtenerCincoMascotas();
