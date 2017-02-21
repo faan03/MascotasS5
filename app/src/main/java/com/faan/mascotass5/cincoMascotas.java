@@ -42,6 +42,8 @@ public class cincoMascotas extends AppCompatActivity {
     public void inicializarListaMascotas() {
         mascotas = new ArrayList<Mascota>();
         ContructorMascotas constructor = new ContructorMascotas(getApplicationContext());
+        BaseDeDatos db = new BaseDeDatos(getApplicationContext());
+        constructor.insertarMascotas(db);
         mascotas = constructor.obtenerCincoMascotas();
 
 
