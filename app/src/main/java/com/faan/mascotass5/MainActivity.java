@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void inicializarAdaptador(){
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas,this);
+        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas,this, getApplicationContext());
         listaMascotas.setAdapter(adaptador);
     }
     public void inicializarListaMascotas(){

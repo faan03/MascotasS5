@@ -35,7 +35,7 @@ public class cincoMascotas extends AppCompatActivity {
     }
 
     public void inicializarAdaptador() {
-        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas,this);
+        MascotaAdaptador adaptador = new MascotaAdaptador(mascotas,this, getApplicationContext());
         lista5Mascotas.setAdapter(adaptador);
     }
 

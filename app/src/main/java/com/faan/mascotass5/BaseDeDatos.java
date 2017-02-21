@@ -27,7 +27,7 @@ public class BaseDeDatos extends SQLiteOpenHelper {
         String queryCrearTablaMascotas = "CREATE TABLE " + ConstantesBD.TABLE_MASCOTA + "(" +
                 ConstantesBD.TABLE_MASCOTA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 ConstantesBD.TABLE_MASCOTA_FOTO + " INTEGER, " +
-                ConstantesBD.TABLE_MASCOTA_NOMBRE + " TEXT, " +
+                ConstantesBD.TABLE_MASCOTA_NOMBRE + " TEXT" +
                 ")";
 
         String queryCrearTablaLikesMascotas = "CREATE TABLE " + ConstantesBD.TABLE_LIKES_MASCOTA + "(" +
