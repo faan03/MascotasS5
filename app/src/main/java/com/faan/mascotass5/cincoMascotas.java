@@ -44,16 +44,8 @@ public class cincoMascotas extends AppCompatActivity {
         ContructorMascotas constructor = new ContructorMascotas(getApplicationContext());
         BaseDeDatos db = new BaseDeDatos(getApplicationContext());
         constructor.insertarMascotas(db);
-        mascotas = constructor.obtenerCincoMascotas();
-
-
-
-      /*  mascotas.add(new Mascota("Micho I", 10, R.drawable.micho));
-        mascotas.add(new Mascota("Micho II",9, R.drawable.micho2));
-        mascotas.add(new Mascota("Micho III",8, R.drawable.micho3));
-        mascotas.add(new Mascota("Micho IV",7, R.drawable.micho));
-        mascotas.add(new Mascota("Micho V",6, R.drawable.micho));
-*/
+//        mascotas = constructor.obtenerCincoMascotas();
+        mascotas = constructor.obtenerMascotas();
 
     }
 }

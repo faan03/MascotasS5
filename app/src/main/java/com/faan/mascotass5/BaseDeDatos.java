@@ -77,7 +77,7 @@ public class BaseDeDatos extends SQLiteOpenHelper {
         return mascotas;
     }
 
-    public ArrayList<Mascota> obtenerTodasMascotas() {
+    public ArrayList<Mascota> obtenerMascotas() {
         ArrayList<Mascota> mascotas = new ArrayList<>();
         String query = "SELECT * FROM " + ConstantesBD.TABLE_MASCOTA;
         SQLiteDatabase db = this.getWritableDatabase();

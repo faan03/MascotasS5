@@ -23,10 +23,10 @@ public class ContructorMascotas {
     public ArrayList<Mascota> obtenerMascotas() {
         BaseDeDatos db = new BaseDeDatos(context);
 
-        if (db.obtenerTodasMascotas().isEmpty()) {
+        if (db.obtenerMascotas().isEmpty()) {
             insertarMascotas(db);
         }
-        return db.obtenerTodasMascotas();
+        return db.obtenerMascotas();
     }
 
     public void insertarMascotas(BaseDeDatos db) {
