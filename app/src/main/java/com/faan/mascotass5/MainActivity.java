@@ -12,7 +12,7 @@ import android.view.View;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements IMainActivity {
 
     ArrayList <Mascota> mascotas;
     private RecyclerView listaMascotas;
@@ -50,4 +50,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    @Override
+    public MascotaAdaptador crearAdaptador(ArrayList<Mascota> Mascotas) {
+        return null;
+    }
+
+    @Override
+    public void generarLinearLayoutVertical() {
+
+    }
+
+    @Override
+    public void inicializarAdaptador(MascotaAdaptador adaptador) {
+
+    }
 }
